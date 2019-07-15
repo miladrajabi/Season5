@@ -1,0 +1,26 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:padding="@dimen/dp16"
+    tools:context=".Episods.MainActivity">
+
+    <TextView
+        android:id="@+id/txtQ"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="@string/osQuestion" />
+
+    <Spinner
+        android:id="@+id/spnrOs"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/txtQ"
+        android:layout_alignParentStart="true"
+        android:layout_alignParentLeft="true"
+        android:entries="@array/test" />
+
+
+</RelativeLayout>

@@ -1,0 +1,29 @@
+<resources>
+    <string name="app_name">Season5</string>
+
+    <string name="osQuestion">شما از چه سیستم عاملی استفاده می کنید؟</string>
+    <string name="sampleText">Parmisan</string>
+
+
+    <string name="krypton">Krypton</string>
+    <string name="krypton_desc">کریپتون ، نام سریالی اکشن و علمی تخیلی است که توسط دیوید اس گویر ساخته است. این سریال داستان پدربزرگ سوپرمن را روایت می‌کند که خاندانش از جامعه طرد شده‌اند. پدربزرگ سوپرمن یک نابغه‎ی فنی و مکانیکی است که سعی می‌‌کند دوباره نام خانوادگی‎شان را احیا کند تا بار دیگر از آن به نیکی یاد شود. او در پایین‌ترین طبقات اجتماعی سیاره کریپتون زندگی می‌کند و…
+</string>
+    <string name="harrow">Harrow</string>
+    <string name="harrow_desc">هرو ، نام سریالی پزشکی و رازآلود می‌باشد که توسط استیون ام آروین و لی مک‎گراث ساخته شده است. در این سریال یوان گریفید بازیگر بسیار معروف سینمای جهان به ایفای نقش می‎پردازد. هرو ، داستان دکتر دنیل هرو را روایت می‎کند ، یک آسیب‎شناس پزشکی قانونی که با ماجراهای مختلفی در زندگیش مواجه می‎شود و…</string>
+
+    <string-array name="test">
+        <item>1</item>
+        <item>2</item>
+        <item>3</item>
+        <item>4</item>
+        <item>5</item>
+    </string-array>
+
+    <string name="amirAzimi">امیر عظیمی</string>
+    <string name="amirAzimi_song">اسب وحشی</string>
+    <string name="amirAzimi_image">asbevahshi</string>
+    <string name="amirAzimi_view">140</string>
+    <string name="amirAzimi_like">20</string>
+    <string name="amirAzimi_date">23 تیر 1398</string>
+
+</resources>
