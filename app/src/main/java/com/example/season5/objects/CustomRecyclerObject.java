@@ -8,17 +8,19 @@ public class CustomRecyclerObject {
     private int view;
     private int comment;
     private String date;
+    int image;
 
     public CustomRecyclerObject() {
     }
 
-    public CustomRecyclerObject(String singerName, String songName, int like, int view, int comment, String date) {
+    public CustomRecyclerObject(String singerName, String songName, int like, int view, int comment, String date,int image) {
         this.singerName = singerName;
         this.songName = songName;
         this.like = like;
         this.view = view;
         this.comment = comment;
         this.date = date;
+        this.image = image;
     }
 
 
@@ -68,5 +70,13 @@ public class CustomRecyclerObject {
 
     public void setDate(String date) {
         this.date = date;
+    }
+
+    public int getImage() {
+        return image;
+    }
+
+    public void setImage(int image) {
+        this.image = image;
     }
 }
