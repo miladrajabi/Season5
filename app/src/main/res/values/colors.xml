@@ -7,4 +7,6 @@
     <color name="overLay">#77212121</color>
     <color name="songNameColor">#0fd4ed</color>
     <color name="singerNameColor">#d7dbdc</color>
+    <color name="fragmentColor">#CCCCCC</color>
+    <color name="chatSend">#AB2342A5</color>
 </resources>

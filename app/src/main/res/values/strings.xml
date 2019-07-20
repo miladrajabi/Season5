@@ -27,5 +27,7 @@
     <string name="amirAzimi_date">23 تیر 1398</string>
 
     <string name="songName">Song Name</string>
+    <string name="type_your_message">Type Your Message ...</string>
+    <string name="write_your_message">Write Your Message</string>
 
 </resources>
