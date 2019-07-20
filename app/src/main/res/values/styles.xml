@@ -8,4 +8,9 @@
         <item name="colorAccent">@color/colorAccent</item>
     </style>
 
+    <style name="RecyclerPadding">
+
+        <item name="android:paddingBottom">@dimen/dp8</item>
+        <item name="android:paddingTop">@dimen/dp10</item>
+    </style>
 </resources>
