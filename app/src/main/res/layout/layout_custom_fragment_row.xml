@@ -1,0 +1,40 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+
+    <android.support.v7.widget.RecyclerView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_above="@id/lnrFrg" />
+
+    <LinearLayout
+        android:id="@+id/lnrFrg"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_alignParentBottom="true"
+        android:orientation="horizontal"
+        android:padding="@dimen/dp8"
+        android:weightSum="1">
+
+        <android.support.v7.widget.AppCompatEditText
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_weight="0.9"
+            android:inputType="textMultiLine" />
+
+        <android.support.v7.widget.AppCompatImageView
+            android:layout_width="wrap_content"
+            android:layout_height="match_parent"
+            android:layout_weight="0.1"
+            android:paddingLeft="@dimen/dp4"
+            android:paddingTop="@dimen/dp4"
+            android:paddingBottom="@dimen/dp4"
+            android:rotation="-40"
+            app:srcCompat="@drawable/ic_send_black_24dp" />
+
+
+    </LinearLayout>
+</RelativeLayout>
