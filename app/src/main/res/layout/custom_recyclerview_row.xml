@@ -1,153 +1,155 @@
 <?xml version="1.0" encoding="utf-8"?>
-<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:id="@+id/rlRclParent"
     android:layout_width="match_parent"
     android:layout_height="match_parent">
-
-    <ImageView
-        android:id="@+id/imgSong"
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:scaleType="centerCrop"
-        android:src="@drawable/asbevahshi" />
 
 
     <RelativeLayout
         android:layout_width="match_parent"
-        android:layout_height="match_parent"
-        android:background="@color/overLay">
+        android:layout_height="match_parent">
 
-
-        <TextView
-            android:id="@+id/crSongName"
+        <android.support.v7.widget.AppCompatImageView
+            android:id="@+id/imgSong"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:layout_alignParentTop="true"
-            android:gravity="center"
-            android:padding="@dimen/dp8"
-            android:text="@string/songName"
-            android:textColor="@color/songNameColor"
-            android:textSize="35sp"
-            android:textStyle="bold" />
+            android:scaleType="centerCrop"
+            android:src="@drawable/asbevahshi" />
 
-        <TextView
-            android:id="@+id/crSingerName"
+        <RelativeLayout
             android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:layout_alignParentBottom="true"
-            android:gravity="center"
-            android:padding="@dimen/dp16"
-            android:text="@string/songName"
-            android:textColor="@color/singerNameColor"
-            android:textSize="20sp"
-            android:textStyle="normal" />
+            android:layout_height="match_parent"
+            android:background="@color/overLay">
 
-        <LinearLayout
-            android:id="@+id/lnr2"
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:layout_above="@id/crSingerName"
-            android:gravity="center"
-            android:layout_alignParentBottom="true"
-            android:orientation="horizontal">
-
-
-            <LinearLayout
+            <TextView
+                android:id="@+id/crSongName"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
+                android:layout_alignParentTop="true"
                 android:gravity="center"
+                android:padding="@dimen/dp8"
+                android:text="@string/songName"
+                android:textColor="@color/songNameColor"
+                android:textSize="35sp"
+                android:textStyle="bold" />
 
-                android:orientation="horizontal">
-
-                <ImageView
-                    android:layout_width="wrap_content"
-                    android:layout_height="match_parent"
-                    android:padding="@dimen/dp8"
-                    app:srcCompat="@drawable/ic_remove_red_eye_black_24dp" />
-
-                <TextView
-                    android:id="@+id/crTxtView"
-                    style="@style/RecyclerPadding"
-                    android:layout_width="wrap_content"
-                    android:layout_height="match_parent"
-                    android:padding="@dimen/dp8"
-                    android:text="7561"
-                    android:textColor="@color/white" />
-
-            </LinearLayout>
+            <TextView
+                android:id="@+id/crSingerName"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_alignParentBottom="true"
+                android:gravity="center"
+                android:padding="@dimen/dp16"
+                android:text="@string/songName"
+                android:textColor="@color/singerNameColor"
+                android:textSize="20sp"
+                android:textStyle="normal" />
 
             <LinearLayout
-                android:layout_width="wrap_content"
+                android:id="@+id/lnr2"
+                android:layout_width="match_parent"
                 android:layout_height="wrap_content"
+                android:layout_above="@id/crSingerName"
+                android:layout_alignParentBottom="true"
+                android:gravity="center"
                 android:orientation="horizontal">
 
-                <ImageView
-                    android:layout_width="wrap_content"
-                    android:layout_height="match_parent"
-                    android:padding="@dimen/dp8"
-                    android:tint="@color/white"
-                    app:srcCompat="@drawable/ic_favorite_black_24dp" />
 
-                <TextView
-                    android:id="@+id/crTxtLike"
-                    style="@style/RecyclerPadding"
-                    android:layout_width="wrap_content"
-                    android:layout_height="match_parent"
-                    android:padding="@dimen/dp8"
-                    android:text="561"
-                    android:textColor="@color/white" />
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:gravity="center"
 
+                    android:orientation="horizontal">
+
+                    <android.support.v7.widget.AppCompatImageView
+                        android:layout_width="wrap_content"
+                        android:layout_height="match_parent"
+                        android:padding="@dimen/dp8"
+                        app:srcCompat="@drawable/ic_remove_red_eye_black_24dp" />
+
+                    <TextView
+                        android:id="@+id/crTxtView"
+                        android:layout_width="wrap_content"
+                        android:layout_height="match_parent"
+                        android:padding="@dimen/dp8"
+                        android:text="7561"
+                        android:textColor="@color/white" />
+
+                </LinearLayout>
+
+                <LinearLayout
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:orientation="horizontal">
+
+                    <android.support.v7.widget.AppCompatImageView
+                        android:layout_width="wrap_content"
+                        android:layout_height="match_parent"
+                        android:padding="@dimen/dp8"
+                        android:tint="@color/white"
+                        app:srcCompat="@drawable/ic_favorite_black_24dp" />
+
+                    <TextView
+                        android:id="@+id/crTxtLike"
+                        android:layout_width="wrap_content"
+                        android:layout_height="match_parent"
+                        android:padding="@dimen/dp8"
+                        android:text="561"
+                        android:textColor="@color/white" />
+
+                </LinearLayout>
+
+
+                <LinearLayout
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:orientation="horizontal">
+
+                    <android.support.v7.widget.AppCompatImageView
+                        android:layout_width="wrap_content"
+                        android:layout_height="match_parent"
+                        android:padding="@dimen/dp8"
+                        android:tint="@color/white"
+                        app:srcCompat="@drawable/ic_mode_comment_black_24dp" />
+
+                    <TextView
+                        android:id="@+id/crTxtComment"
+                        android:layout_width="wrap_content"
+                        android:layout_height="match_parent"
+                        android:padding="@dimen/dp8"
+                        android:text="561"
+                        android:textColor="@color/white" />
+
+                </LinearLayout>
+
+                <LinearLayout
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:orientation="horizontal">
+
+                    <android.support.v7.widget.AppCompatImageView
+                        android:layout_width="wrap_content"
+                        android:layout_height="match_parent"
+                        android:padding="@dimen/dp8"
+                        android:tint="@color/white"
+                        app:srcCompat="@drawable/ic_date_range_black_24dp" />
+
+                    <TextView
+                        android:id="@+id/crTxtDate"
+                        android:layout_width="wrap_content"
+                        android:layout_height="match_parent"
+                        android:padding="@dimen/dp8"
+                        android:text="1398/04/27"
+                        android:textColor="@color/white" />
+
+                </LinearLayout>
             </LinearLayout>
+        </RelativeLayout>
 
-
-            <LinearLayout
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:orientation="horizontal">
-
-                <ImageView
-                    android:layout_width="wrap_content"
-                    android:layout_height="match_parent"
-                    android:padding="@dimen/dp8"
-                    android:tint="@color/white"
-                    app:srcCompat="@drawable/ic_mode_comment_black_24dp" />
-
-                <TextView
-                    android:id="@+id/crTxtComment"
-                    style="@style/RecyclerPadding"
-                    android:layout_width="wrap_content"
-                    android:layout_height="match_parent"
-                    android:padding="@dimen/dp8"
-                    android:text="561"
-                    android:textColor="@color/white" />
-
-            </LinearLayout>
-
-            <LinearLayout
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:orientation="horizontal">
-
-                <ImageView
-                    android:layout_width="wrap_content"
-                    android:layout_height="match_parent"
-                    android:padding="@dimen/dp8"
-                    android:tint="@color/white"
-                    app:srcCompat="@drawable/ic_date_range_black_24dp" />
-
-                <TextView
-                    android:id="@+id/crTxtDate"
-                    style="@style/RecyclerPadding"
-                    android:layout_width="wrap_content"
-                    android:layout_height="match_parent"
-                    android:padding="@dimen/dp8"
-                    android:text="1398/04/27"
-                    android:textColor="@color/white" />
-
-            </LinearLayout>
-        </LinearLayout>
 
     </RelativeLayout>
 
 
-</RelativeLayout>
+</LinearLayout>

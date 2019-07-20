@@ -1,6 +1,8 @@
 package com.example.season5.objects;
 
-public class CustomRecyclerObject {
+import java.io.Serializable;
+
+public class CustomRecyclerObject implements Serializable {
 
     private String singerName;
     private String songName;
@@ -13,7 +15,7 @@ public class CustomRecyclerObject {
     public CustomRecyclerObject() {
     }
 
-    public CustomRecyclerObject(String singerName, String songName, int like, int view, int comment, String date,int image) {
+    public CustomRecyclerObject(String singerName, String songName, int like, int view, int comment, String date, int image) {
         this.singerName = singerName;
         this.songName = songName;
         this.like = like;

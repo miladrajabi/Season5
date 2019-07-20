@@ -6,10 +6,13 @@ import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
 import android.widget.ImageView;
+import android.widget.LinearLayout;
+import android.widget.RelativeLayout;
 import android.widget.TextView;
 
 import com.example.season5.R;
 import com.example.season5.app.Application;
+import com.example.season5.interfaces.CustomRecyclerViewClickListener;
 import com.example.season5.objects.CustomRecyclerObject;
 
 import java.util.List;
@@ -17,9 +20,11 @@ import java.util.List;
 public class CustomRecyclerAdapter extends RecyclerView.Adapter<CustomRecyclerAdapter.MyViewHolder> {
 
     List<CustomRecyclerObject> objects;
+    CustomRecyclerViewClickListener clickListener;
 
-    public CustomRecyclerAdapter(List<CustomRecyclerObject> list) {
+    public CustomRecyclerAdapter(List<CustomRecyclerObject> list, CustomRecyclerViewClickListener itemClickListener) {
         this.objects = list;
+        this.clickListener = itemClickListener;
     }
 
     public CustomRecyclerAdapter() {
@@ -52,22 +57,32 @@ public class CustomRecyclerAdapter extends RecyclerView.Adapter<CustomRecyclerAd
         return objects.size();
     }
 
-    public static class MyViewHolder extends RecyclerView.ViewHolder {
+    public class MyViewHolder extends RecyclerView.ViewHolder implements View.OnClickListener {
 
         TextView crTxtView, crTxtLike, crTxtComment, crTxtDate, crSongName, crSingerName;
         ImageView imgSong;
+        LinearLayout rlRclParent;
 
 
         public MyViewHolder(@NonNull View itemView) {
             super(itemView);
-            crTxtView = itemView.findViewById(R.id.crTxtView);
-            crSongName = itemView.findViewById(R.id.crSongName);
             crTxtLike = itemView.findViewById(R.id.crTxtLike);
             crTxtComment = itemView.findViewById(R.id.crTxtComment);
             crTxtDate = itemView.findViewById(R.id.crTxtDate);
+            crTxtView = itemView.findViewById(R.id.crTxtView);
+
+            crSongName = itemView.findViewById(R.id.crSongName);
             crSingerName = itemView.findViewById(R.id.crSingerName);
             imgSong = itemView.findViewById(R.id.imgSong);
 
+            rlRclParent = itemView.findViewById(R.id.rlRclParent);
+
+            rlRclParent.setOnClickListener(this);
+        }
+
+        @Override
+        public void onClick(View v) {
+            clickListener.OnClick(objects.get(getAdapterPosition()));
         }
     }
 }

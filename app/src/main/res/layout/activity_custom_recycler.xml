@@ -13,5 +13,14 @@
 
     </android.support.v7.widget.RecyclerView>
 
+    <android.support.design.widget.FloatingActionButton
+        android:id="@+id/fabRcl"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentRight="true"
+        android:layout_alignParentBottom="true"
+        android:layout_margin="@dimen/dp8"
+        android:tint="@color/white"
+        app:srcCompat="@drawable/ic_dehaze_black_24dp" />
 
 </RelativeLayout>
