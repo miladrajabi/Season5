@@ -29,5 +29,6 @@
     <string name="songName">Song Name</string>
     <string name="type_your_message">Type Your Message ...</string>
     <string name="write_your_message">Write Your Message</string>
+    <string name="ask_permission">Ask Permission</string>
 
 </resources>

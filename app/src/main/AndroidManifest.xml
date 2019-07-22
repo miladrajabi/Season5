@@ -2,6 +2,8 @@
 <manifest xmlns:android="http://schemas.android.com/apk/res/android"
     package="com.example.season5">
 
+    <uses-permission android:name="android.permission.RECEIVE_SMS"></uses-permission>
+
     <application
         android:name=".app.Application"
         android:allowBackup="true"
@@ -10,17 +12,18 @@
         android:roundIcon="@mipmap/ic_launcher_round"
         android:supportsRtl="true"
         android:theme="@style/AppTheme">
-        <activity
-            android:name=".Episods.FragmentActivity"
-            android:theme="@style/AppTheme.NoActionBar">
+        <activity android:name=".Episods.CustomPermissionActivity">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
 
                 <category android:name="android.intent.category.LAUNCHER" />
             </intent-filter>
         </activity>
+        <activity
+            android:name=".Episods.FragmentActivity"
+            android:theme="@style/AppTheme.NoActionBar"></activity>
         <activity android:name=".adapter.CustomRecyclerDetailActivity" />
-        <activity android:name=".Episods.CustomRecyclerActivity"></activity>
+        <activity android:name=".Episods.CustomRecyclerActivity" />
         <activity android:name=".Episods.CustomGridViewActivity" />
         <activity android:name=".Episods.CustomListViewActivity" />
         <activity android:name=".Episods.MainActivity" />
