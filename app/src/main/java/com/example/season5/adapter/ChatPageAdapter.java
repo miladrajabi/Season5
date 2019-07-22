@@ -1,6 +1,8 @@
 package com.example.season5.adapter;
 
+import android.graphics.Color;
 import android.support.annotation.NonNull;
+import android.support.v7.widget.AppCompatImageView;
 import android.support.v7.widget.RecyclerView;
 import android.view.LayoutInflater;
 import android.view.View;
@@ -34,6 +36,20 @@ public class ChatPageAdapter extends RecyclerView.Adapter<ChatPageAdapter.chatPa
     @Override
     public void onBindViewHolder(@NonNull chatPageViewHolder chatPageViewHolder, int i) {
         chatPageViewHolder.txtMsgMe.setText(objects.get(i).getMsg());
+        chatPageViewHolder.txtTime.setText(objects.get(i).getDate());
+        if (!objects.get(i).getSeen()) {
+            chatPageViewHolder.imgSeen.setImageResource(R.drawable.ic_done_black_24dp);
+        } else {
+            chatPageViewHolder.imgSeen.setImageResource(R.drawable.ic_done_all_black_24dp);
+
+        }
+        if (objects.get(i).getMe()) {
+            chatPageViewHolder.txtMsgMe.setTextColor(Color.RED);
+        } else {
+            chatPageViewHolder.txtMsgMe.setTextColor(Color.DKGRAY);
+        }
+
+
     }
 
     @Override
@@ -44,11 +60,14 @@ public class ChatPageAdapter extends RecyclerView.Adapter<ChatPageAdapter.chatPa
 
     public class chatPageViewHolder extends RecyclerView.ViewHolder {
 
-        TextView txtMsgMe;
+        TextView txtMsgMe, txtTime;
+        AppCompatImageView imgSeen;
 
         public chatPageViewHolder(@NonNull View itemView) {
             super(itemView);
             txtMsgMe = itemView.findViewById(R.id.txtMsgMe);
+            txtTime = itemView.findViewById(R.id.txtTime);
+            imgSeen = itemView.findViewById(R.id.imgSeen);
 
         }
     }

@@ -1,17 +1,29 @@
 <?xml version="1.0" encoding="utf-8"?>
 <RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
     android:layout_width="match_parent"
-    android:layout_height="wrap_content">
+    android:layout_height="wrap_content"
 
+    android:layout_marginLeft="@dimen/dp16"
+    android:layout_marginTop="@dimen/dp16"
+    android:layout_marginRight="@dimen/dp8"
+    android:background="@drawable/chat_page_background">
+
+    <!--    <ImageView
+            android:id="@+id/imgUser"
+            android:layout_width="@dimen/dp40"
+            android:layout_height="@dimen/dp40"
+            android:layout_alignParentLeft="true"
+            android:layout_alignParentTop="true"
+            android:src="@drawable/ic_male" />-->
 
     <TextView
         android:id="@+id/txtMsgMe"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:layout_marginLeft="@dimen/dp16"
-        android:layout_marginTop="@dimen/dp16"
-        android:layout_marginRight="@dimen/dp8"
-        android:background="@color/fragmentColor"
+        android:layout_alignParentTop="true"
+        android:layout_marginBottom="@dimen/dp16"
+        android:lineSpacingExtra="@dimen/sp12"
         android:paddingLeft="@dimen/dp16"
         android:paddingTop="@dimen/dp8"
         android:paddingRight="@dimen/dp8"
@@ -19,4 +31,27 @@
         android:text="@string/sampleText"
         android:textColor="@color/chatMsgColor"
         android:textSize="@dimen/dp16" />
+
+    <android.support.v7.widget.AppCompatImageView
+        android:id="@+id/imgSeen"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentRight="true"
+        android:layout_alignParentBottom="true"
+        android:padding="@dimen/dp8"
+        android:tint="@color/colorPrimaryDark"
+        app:srcCompat="@drawable/ic_done_black_24dp" />
+
+    <TextView
+        android:id="@+id/txtTime"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentBottom="true"
+        android:layout_toLeftOf="@id/imgSeen"
+        android:padding="@dimen/dp8"
+        android:text="19:20:20"
+        android:textColor="@color/chatMsgColor"
+        android:textStyle="bold" />
+
+
 </RelativeLayout>

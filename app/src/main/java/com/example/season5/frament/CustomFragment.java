@@ -19,9 +19,11 @@ import android.widget.TextView;
 
 import com.example.season5.R;
 import com.example.season5.adapter.ChatPageAdapter;
+import com.example.season5.interfaces.IChatPageMessageListener;
 import com.example.season5.objects.ChatPageObject;
 
 import java.util.ArrayList;
+import java.util.Calendar;
 import java.util.List;
 
 public class CustomFragment extends Fragment implements View.OnClickListener {
@@ -32,6 +34,10 @@ public class CustomFragment extends Fragment implements View.OnClickListener {
     RecyclerView rclCht;
     ChatPageAdapter adapter;
     List<ChatPageObject> list = new ArrayList<>();
+    boolean me = true;
+    boolean seen = false;
+    public static IChatPageMessageListener messageListener;
+
 
     @Nullable
     @Override
@@ -76,13 +82,25 @@ public class CustomFragment extends Fragment implements View.OnClickListener {
     }
 
     private void sendMessage() {
+        me = !me;
+        seen = !seen;
         if (TextUtils.isEmpty(chatEditTxt.getText().toString())) {
             return; // or break, continue, throw
         }
+        Calendar c = Calendar.getInstance();
+
+        String time = String.valueOf(c.get(Calendar.HOUR) + ":" + c.get(Calendar.MINUTE) + ":" + c.get(Calendar.SECOND));
+
         txtFNoMsg.setVisibility(View.GONE);
         ChatPageObject object = new ChatPageObject();
         object.setMsg(chatEditTxt.getText().toString());
+        object.setDate(time);
+        object.setSeen(seen);
+        object.setMe(me);
+        object.setType(ChatPageObject.TYPE_MESSAGE);
+
         list.add(object);
+        rclCht.smoothScrollToPosition(list.size());
         adapter.notifyDataSetChanged();
         chatEditTxt.setText("");
         //txtFNoMsg.setText("");
