@@ -50,4 +50,8 @@
     <string name="positive">Positive</string>
     <string name="custom_alert_dialog">Custom Alert dialog</string>
 
+    <string name="checkPermission">Check Permission</string>
+    <string name="permissionGenerat">permission Generat</string>
+    <string name="permissionDenied">permission Denied</string>
+
 </resources>

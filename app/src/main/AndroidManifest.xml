@@ -2,7 +2,7 @@
 <manifest xmlns:android="http://schemas.android.com/apk/res/android"
     package="com.example.season5">
 
-    <uses-permission android:name="android.permission.RECEIVE_SMS" />
+    <uses-permission android:name="android.permission.RECEIVE_SMS"></uses-permission>
 
     <application
         android:name=".app.Application"
@@ -12,7 +12,7 @@
         android:roundIcon="@mipmap/ic_launcher_round"
         android:supportsRtl="true"
         android:theme="@style/AppTheme">
-        <activity android:name=".Episods.CustomAlertDialogActivity">
+        <activity android:name=".Episods.CustomPermissionActivity">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
 
@@ -20,15 +20,8 @@
             </intent-filter>
         </activity>
         <activity
-            android:name=".Episods.CustomNavigationActivity"
-            android:label="@string/title_activity_custom_navigation"
-            android:theme="@style/AppTheme.NoActionBar"></activity>
-        <activity android:name=".Episods.CustomPermissionActivity">
-
-        </activity>
-        <activity
             android:name=".Episods.FragmentActivity"
-            android:theme="@style/AppTheme.NoActionBar" />
+            android:theme="@style/AppTheme.NoActionBar"></activity>
         <activity android:name=".adapter.CustomRecyclerDetailActivity" />
         <activity android:name=".Episods.CustomRecyclerActivity" />
         <activity android:name=".Episods.CustomGridViewActivity" />
