@@ -8,10 +8,19 @@
     tools:context=".Episods.FragmentActivity">
 
 
-    <fragment
-        android:id="@+id/frgChat"
-        android:name="com.example.season5.frament.CustomFragment"
-        class="com.example.season5.frament.CustomFragment"
+    <android.support.v7.widget.RecyclerView
+        android:id="@+id/rclCnt"
         android:layout_width="match_parent"
-        android:layout_height="match_parent"></fragment>
+        android:layout_height="match_parent"></android.support.v7.widget.RecyclerView>
+
+    <TextView
+        android:id="@+id/txtNocnt"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:gravity="center"
+        android:text="@string/sampleText"
+        android:textColor="@color/colorPrimary"
+        android:textSize="40sp" />
+
+
 </RelativeLayout>

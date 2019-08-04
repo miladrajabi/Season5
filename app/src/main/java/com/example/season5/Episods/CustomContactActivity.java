@@ -16,6 +16,7 @@ import android.support.v7.widget.RecyclerView;
 import com.example.season5.R;
 import com.example.season5.adapter.CustomContactAdapter;
 import com.example.season5.app.app;
+import com.example.season5.frament.CustomContactFragment;
 import com.example.season5.objects.CustomContactObject;
 
 import java.util.ArrayList;
@@ -35,10 +36,11 @@ public class CustomContactActivity extends AppCompatActivity {
 
     private void init() {
 
+        if (checkPermission()) {
+            CustomContactFragment.customContactListener.onPermissionChange(true);
 
-
+        }
     }
-
 
 
     @org.jetbrains.annotations.NotNull
@@ -48,10 +50,12 @@ public class CustomContactActivity extends AppCompatActivity {
             int result = ContextCompat.checkSelfPermission(this, Manifest.permission.READ_CONTACTS);
 
             if (result == PackageManager.PERMISSION_GRANTED) {
+                CustomContactFragment.customContactListener.onPermissionChange(true);
                 return true;
             }
             ActivityCompat.requestPermissions(this, new String[]{Manifest.permission.READ_CONTACTS}, REQUEST_CODE);
         } else {
+            CustomContactFragment.customContactListener.onPermissionChange(true);
             return true;
         }
         return false;
@@ -63,6 +67,7 @@ public class CustomContactActivity extends AppCompatActivity {
             case REQUEST_CODE: {
                 if (grantResults[0] == PackageManager.PERMISSION_GRANTED) {
 
+                    CustomContactFragment.customContactListener.onPermissionChange(true);
                 } else {
                     init();
                     app.toast(getString(R.string.permissionDenied));

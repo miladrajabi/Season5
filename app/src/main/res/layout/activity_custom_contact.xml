@@ -8,6 +8,7 @@
 
 
     <fragment
+        android:id="@+id/frgContact"
         android:name="com.example.season5.frament.CustomContactFragment"
         class="com.example.season5.frament.CustomContactFragment"
         android:layout_width="match_parent"
