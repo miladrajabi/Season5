@@ -56,4 +56,9 @@
     <string name="title_activity_navigation_view_custom">NavigationViewCustomActivity</string>
     <string name="myProfile">Milad</string>
 
+    <string name="title_activity_custom_button_navigation">CustomButtonNavigationActivity</string>
+    <string name="title_home">Home</string>
+    <string name="title_dashboard">Dashboard</string>
+    <string name="title_notifications">Notifications</string>
+
 </resources>

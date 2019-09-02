@@ -11,9 +11,17 @@ public class Application extends android.app.Application {
     public void onCreate() {
         super.onCreate();
         context = this;
+
+        setFont();
     }
 
     public static Context getContext() {
         return context;
+    }
+
+    private void setFont() {
+        String iran_yekan = "Fonts/yekan-regular.ttf";
+        FontOveride.setDefalutFont(iran_yekan);
+
     }
 }

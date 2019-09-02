@@ -12,16 +12,19 @@
         android:roundIcon="@mipmap/ic_launcher_round"
         android:supportsRtl="true"
         android:theme="@style/AppTheme">
-        <activity android:name=".Episods.CustomContactActivity">
-        </activity>
-        <activity android:name=".Episods.CustomPermissionActivity" >
-
+        <activity android:name=".Episods.CostomFontActivity">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
 
                 <category android:name="android.intent.category.LAUNCHER" />
             </intent-filter>
         </activity>
+        <activity
+            android:name=".Episods.CustomButtonNavigationActivity"
+            android:label="@string/title_activity_custom_button_navigation">
+        </activity>
+        <activity android:name=".Episods.CustomContactActivity" />
+        <activity android:name=".Episods.CustomPermissionActivity"></activity>
         <activity
             android:name=".Episods.FragmentActivity"
             android:theme="@style/AppTheme.NoActionBar" />
