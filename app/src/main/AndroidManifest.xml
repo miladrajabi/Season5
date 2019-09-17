@@ -2,8 +2,6 @@
 <manifest xmlns:android="http://schemas.android.com/apk/res/android"
     package="com.example.season5">
 
-    <uses-permission android:name="android.permission.RECEIVE_SMS" />
-
     <application
         android:name=".app.Application"
         android:allowBackup="true"
@@ -12,19 +10,19 @@
         android:roundIcon="@mipmap/ic_launcher_round"
         android:supportsRtl="true"
         android:theme="@style/AppTheme">
-        <activity android:name=".Episods.CostomFontActivity">
+        <activity android:name=".Episods.CustomScrollActivity">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
 
                 <category android:name="android.intent.category.LAUNCHER" />
             </intent-filter>
         </activity>
+        <activity android:name=".Episods.CostomFontActivity"></activity>
         <activity
             android:name=".Episods.CustomButtonNavigationActivity"
-            android:label="@string/title_activity_custom_button_navigation">
-        </activity>
+            android:label="@string/title_activity_custom_button_navigation"></activity>
         <activity android:name=".Episods.CustomContactActivity" />
-        <activity android:name=".Episods.CustomPermissionActivity"></activity>
+        <activity android:name=".Episods.CustomPermissionActivity" />
         <activity
             android:name=".Episods.FragmentActivity"
             android:theme="@style/AppTheme.NoActionBar" />
@@ -34,5 +32,7 @@
         <activity android:name=".Episods.CustomListViewActivity" />
         <activity android:name=".Episods.MainActivity" />
     </application>
+
+    <uses-permission android:name="android.permission.RECEIVE_SMS" />
 
 </manifest>
