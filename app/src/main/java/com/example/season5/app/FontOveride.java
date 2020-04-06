@@ -7,7 +7,7 @@ import java.lang.reflect.Field;
 public class FontOveride {
     public static void setDefalutFont(String fontName) {
 
-        final Typeface typeface = Typeface.createFromAsset(Application.getContext().getAssets(), fontName);
+        final Typeface typeface = Typeface.createFromAsset(Application.getContext().getAssets(), "font/"+fontName);
 
         try {
 

@@ -20,7 +20,7 @@ public class Application extends android.app.Application {
     }
 
     private void setFont() {
-        String iran_yekan = "Fonts/yekan-regular.ttf";
+        String iran_yekan = "iransansbold.ttf";
         FontOveride.setDefalutFont(iran_yekan);
 
     }
